@@ -574,7 +574,7 @@ label {
 .switch:focus-visible {
   box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--ring);
 }
-.switch[aria-checked="true"] {
+.switch.active, .switch[aria-checked="true"] {
   background-color: var(--primary);
 }
 .switch-thumb {
@@ -588,7 +588,7 @@ label {
   transition: transform var(--transition-fast);
   transform: translateX(0);
 }
-.switch[aria-checked="true"] .switch-thumb {
+.switch.active, .switch.active .switch-thumb, .switch[aria-checked="true"] .switch-thumb {
   transform: translateX(1rem);
 }
 .switch:disabled {
@@ -618,7 +618,7 @@ label {
   background-color: var(--muted);
   color: var(--muted-foreground);
 }
-.toggle[aria-pressed="true"] {
+.toggle.active, .toggle[aria-pressed="true"] {
   background-color: var(--accent);
   color: var(--accent-foreground);
 }
@@ -818,7 +818,7 @@ label {
   color: var(--muted-foreground);
   outline: none;
 }
-.tabs-trigger[aria-selected="true"] {
+.tabs-trigger.active, .tabs-trigger[aria-selected="true"] {
   background-color: var(--background);
   color: var(--foreground);
   box-shadow: var(--shadow-2xs);
@@ -1485,4 +1485,5 @@ label {
     font-size: var(--text-base); /* Evita zoom automatico no iOS Safari */
   }
 }
+
 
